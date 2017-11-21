@@ -1,0 +1,26 @@
+$app-colors: (
+  'white'         : white,
+  'black'         : black,
+  red-500         : #f9443d,
+  green-300       : #bdeacd,
+  green-500       : #7bc092,
+  blue-500        : #5ba9ef,
+  grey-200        : #e6e6e6,
+  grey-250        : #bcbcbc,
+  grey-500        : rgba(0,0,0,0.3),
+  grey-600        : #7b7a7a,
+  grey-700        : rgba(0,0,0,0.8),
+  purple-200      : #e1e7f4,
+);
+
+@each $color in $app-colors {
+  .in-#{nth($color, 1)} {
+    color: nth($color, 2) !important;
+  }
+  .bg-#{nth($color, 1)} {
+    background-color: nth($color, 2) !important;
+  }
+}
+@function color($color) {
+  @return map-get($app-colors, $color)
+}

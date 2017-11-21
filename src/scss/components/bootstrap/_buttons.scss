@@ -1,0 +1,68 @@
+@mixin btn-disabled( $color: color(grey-250), $background: color(grey-200) ) {
+  &.disabled,
+  &.disabled:hover,
+  &[disabled],
+  &[disabled]:hover,
+  fieldset[disabled] & {
+    @include opacity(1);
+    color: $color;
+    background-color: $background;
+  }
+}
+@mixin btn-hover($color, $background) {
+  &:hover,
+  &:focus,
+  .focus {
+    color: $color;
+    background-color: $background;
+  }
+}
+
+.btn {
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 0 50px;
+  height: 40px;
+  border: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  span {
+    display: inline;
+    vertical-align: middle;
+  }
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      outline: none;
+      outline-offset: 0;
+    }
+  }
+}
+
+.btn-primary {
+  @include button-variant(white, color(blue-500), color(blue-500));
+  @include btn-disabled();
+}
+.btn-info {
+  @include button-variant(white, color(green-500), color(green-500));
+  @include btn-disabled();
+}
+.btn-default {
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid transparent;
+  @include btn-hover(black, transparent);
+  @include btn-disabled();
+  &:hover,
+  &:focus,
+  .focus {
+    border-color: color(grey-250);
+  }
+  &:active,
+  &:active:hover {
+    background-color: transparent;
+  }
+}

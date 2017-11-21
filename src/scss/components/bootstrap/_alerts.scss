@@ -1,0 +1,7 @@
+.alert {
+  margin-bottom: 5px;
+}
+.alert-danger {
+  padding: 0;
+  @include alert-variant(transparent, transparent, $form-control-error-color);
+}

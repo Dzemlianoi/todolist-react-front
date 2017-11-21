@@ -1,0 +1,66 @@
+$project-indent-left:  30px;
+$project-indent-right:  $main-padding-horizontal-base;
+
+.project.edit {
+  .project-edit {
+    height: auto;
+    overflow: auto;
+    margin-bottom: 15px;
+  }
+  .project-info {
+    display: none;
+  }
+}
+.project-info {
+  border: 1px solid $base-el-border-color;
+  border-radius: $form-control-radius;
+  margin-bottom: 10px;
+  &.open {
+    .project-info__body {
+      height: auto;
+      overflow: auto;
+    }
+    .project-info__header {
+      background-color: color(purple-200);
+      border-bottom: 1px solid $base-el-border-color;
+    }
+  }
+}
+.project-info__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  &:hover {
+    background-color: rgba(color(grey-200), 0.4);
+    .project-info__actions {
+      opacity: 1;
+    }
+  }
+}
+.project-info__title {
+  flex-grow: 1;
+  padding: 8px $project-indent-right 4px $project-indent-left;
+  line-height: 1.7;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.project-info__actions {
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+  padding-top: 8px;
+  padding-right: $project-indent-right;
+}
+.project-info__title-icon {
+  font-size: 4px;
+  margin-top: 8px;
+}
+.project-info__body {
+  height: 0;
+  overflow: hidden;
+}
+.project-edit {
+  height: 0;
+  overflow: hidden;
+}
