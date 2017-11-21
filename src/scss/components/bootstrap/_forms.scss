@@ -1,0 +1,24 @@
+.form-control:focus {
+  box-shadow: none;
+}
+label, .label {
+  font-weight: 400;
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  top: 2px;
+}
+.help-block {
+  margin-bottom: 0;
+}
+.has-error {
+  @include form-control-validation($form-control-error-color, $form-control-error-color, $form-control-error-color);
+  .form-control:focus {
+    box-shadow: none;
+  }
+  .help-block {
+    color: $form-control-error-color;
+  }
+}

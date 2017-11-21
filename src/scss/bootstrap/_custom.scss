@@ -1,0 +1,37 @@
+$font-size-base:                       14px;
+$line-height-base:                     1.714285;
+$text-color:                           $base-text-color;
+$link-hover-decoration:                underline;
+$link-hover-color:                     color(blue-500);
+$link-color:                           color(blue-500);
+
+$grid-gutter-width:                    20px;
+
+$icon-font-path:                       "../../node_modules/bootstrap/fonts";
+
+//== Components
+$border-radius-base:                   $form-control-radius;
+
+//== Forms
+$input-color:                           $form-control-color;
+$input-border:                          $form-control-border-color;
+$input-border-focus:                    $form-control-border-color-focus;
+$input-color-placeholder:               $form-control-placeholder-color;
+$input-height-base:                     $form-control-height;
+$form-group-margin-bottom:              10px;
+
+//** Border color for inputs on focus
+$input-border-focus:                    color(blue-500);
+
+//== Buttons
+$btn-font-weight:                       300;
+$btn-border-radius-base:                4px;
+$btn-border-radius-large:               4px;
+$btn-border-radius-small:               4px;
+
+// Alerts
+$alert-padding:                         10px 20px 5px;
+
+$alert-success-bg:            color(green-300);
+$alert-success-text:          $base-text-color;
+$alert-success-border:        color(green-300);

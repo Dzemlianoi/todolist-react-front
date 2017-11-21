@@ -1,0 +1,21 @@
+.project-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $project-indent-right 0 $project-indent-left;
+  border-bottom: 1px solid $base-el-border-color;
+  min-height: 50px;
+}
+.project-task-edit-btn {
+  padding: 10px $project-indent-right 5px $project-indent-left;
+}
+.project-task-edit-field {
+  margin-bottom: 0;
+  .form-control {
+    border-radius: 0;
+    padding: 10px $project-indent-right 10px $project-indent-left;
+    min-height: 50px;
+    border: none;
+    box-shadow: none;
+  }
+}

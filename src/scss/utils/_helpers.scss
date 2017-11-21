@@ -1,0 +1,51 @@
+.d-inline-block {
+  display: inline-block !important;
+}
+.align-middle {
+  vertical-align: middle !important;
+}
+.no-shrink {
+  flex-shrink: 0 !important;
+}
+.flex-grow {
+  flex-grow: 1 !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.d-flex {
+  display: flex !important;
+}
+.align-center {
+  align-items: center !important;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $base-el-border-color;
+}
+
+@each $font in (10) {
+  .font-#{$font} {
+    font-size: #{$font}px !important;
+  }
+}
+
+@each $size in (0, 5, 10, 15, 20) {
+  @each $prop in (b: bottom, l: left, r: right, t: top) {
+    .m#{nth($prop, 1)}-#{$size} {
+      margin-#{nth($prop, 2)}: #{$size}px !important;
+    }
+  }
+}
+
+@each $size in (5, 10, 15) {
+  @each $prop in (t: top, b: bottom, l: left, r: right) {
+    .p#{nth($prop, 1)}-#{$size} {
+      padding-#{nth($prop, 2)}: #{$size}px !important;
+    }
+  }
+}
