@@ -2,14 +2,17 @@
 
 import React from 'react'
 import { render } from 'react-dom'
+import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
+import { prepareStore } from './store/configuration.js'
+import { getRootComponentHotModuleReplacement } from './utils/hot_module'
+import Application from './components/Application'
 
-import Application from './Application'
+render(
+  <Provider store={prepareStore()}>
+    <Application />
+  </Provider>,
+  document.getElementById('app')
+)
 
-render(<Application />, document.getElementById('app'))
-
-if (module.hot) {
-  module.hot.accept('./Application', () => {
-    const NextApplication = require('./Application').default
-    render(<NextApplication />, document.getElementById('app'))
-  })
-}
+getRootComponentHotModuleReplacement()
